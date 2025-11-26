@@ -1,0 +1,9 @@
+dependencies:
+- name: jenkins
+  repository: https://charts.jenkins.io
+  version: 4.0.0
+- name: nexus-repository-manager
+  repository: https://sonatype.github.io/helm3-charts
+  version: 39.0.0
+digest: sha256:40d0b73944804066d293d5a24ca1bcc99787eb9c7b0816253a2a7cb8c2962942
+generated: "2025-11-26T17:04:30.1514819+03:00"

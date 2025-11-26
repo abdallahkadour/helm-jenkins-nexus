@@ -1,0 +1,22 @@
+# Helm specific files
+.helmignore # This file itself should not be ignored if it's used for Helm's build process
+requirements.lock # Lock file for chart dependencies
+
+# Build artifacts and temporary files
+*.tgz # Packaged Helm chart
+*.bak # Backup files
+*.swp # Vim swap files
+*~ # Emacs backup files
+.#* # Emacs lock files
+.DS_Store # macOS specific files
+Thumbs.db # Windows specific files
+
+# Local development files
+.vscode/ # VS Code specific settings
+.idea/ # IntelliJ IDEA specific settings
+.env # Environment variables
+.terraform/ # Terraform specific files (if used for infrastructure)
+
+# Logs and other generated output
+logs/
+tmp/

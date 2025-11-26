@@ -1,0 +1,34 @@
+jenkins:
+  controller:
+    repository: custom-jen
+    tag: latest
+    imagePullPolicy: IfNotPresent
+    adminUser: admin
+    adminPassword: admin123
+    installPlugins: false
+  persistence:
+    enabled: true
+    size: 10Gi
+
+nexus-repository-manager:
+  persistence:
+    enabled: true
+    size: 10Gi
+  config:
+    repositories:
+      - name: npm-proxy
+        type: npm-proxy
+        remoteUrl: https://registry.npmjs.org
+      - name: gradle-proxy
+        type: maven-proxy
+        remoteUrl: https://repo.maven.apache.org/maven2
+      - name: apk-hosted
+        type: raw-hosted
+        blobStoreName: default
+        strictContentTypeValidation: false
+
+ingress:
+  enabled: true
+  hosts:
+    jenkins: jenkins.local
+    nexus: nexus.local
