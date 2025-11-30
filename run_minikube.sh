@@ -11,7 +11,7 @@ RELEASE_NAME="cicd-release"
 echo "Building custom Jenkins image: $CUSTOM_IMAGE_TAG..."
 docker build -t $CUSTOM_IMAGE_TAG .
 
-echo "Loading image into Minikube..."
+echo "Loading image into Minikube...__LOG??__"
 minikube image load $CUSTOM_IMAGE_TAG
 
 echo "Creating namespace $NAMESPACE..."

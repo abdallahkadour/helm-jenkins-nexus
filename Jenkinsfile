@@ -6,6 +6,12 @@ pipeline {
                 git 'https://github.com/your-org/react-native-app.git'
             }
         }
+        stage('Clean node modules') {
+            steps {
+                sh 'rm -rf node_modules'
+                sh 'npm install'
+            }
+        }
         stage('Install Dependencies') {
             steps {
                 sh 'npm install'

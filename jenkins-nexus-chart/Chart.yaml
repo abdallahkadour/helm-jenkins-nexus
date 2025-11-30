@@ -4,7 +4,7 @@ version: 0.3.0
 dependencies:
   - name: jenkins
     version: "4.0.0"
-    repository: "https://charts.jenkins.io"
+    repository: https://charts.jenkins.io
   - name: nexus-repository-manager
     version: "39.0.0"
-    repository: "https://sonatype.github.io/helm3-charts"
+    repository: https://sonatype.github.io/helm3-charts
